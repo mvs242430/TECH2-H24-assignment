@@ -1,13 +1,6 @@
-# TECH2 mandatory assignment
+# Solution to TECH2 mandatory assignment
 
-The assignment is given in the in the PDF file [assignment.pdf](assignment.pdf).
+The solution is in [part_A.py](part_A.py) and [part_B.ipynb](part_B.ipynb).
 
-To write your solution, you should
-
-1. Fork this repository
-2. Clone your forked repository on your computer using `git clone`
-4. Add your implementation to `part_A.py` and `part_B.ipynb`
-5. Commit your solution and push it to GitHub
-6. Make sure the repository containing the solution is public
-
-Deadline: Sunday, October 6, 2024 at 23:59
+File [util.py](util.py) contains helper functions to `part_A.py`
+File [test_part_A.py](test_part_A.py) has tests for functions in `part_A.py` and `validate_numbers` function.
