@@ -1,5 +1,5 @@
 import pytest
-import part_A
+from part_A import std_builtin, std_loops
 from util import validate_numbers
 import numpy as np
 
@@ -13,17 +13,17 @@ param_data = pytest.mark.parametrize('data',[
 
 @param_data
 def test_loop(data):
-    expected = part_A.std_loops(data)
+    expected = std_loops(data)
     actual = np.std(data)
-    assert np.isclose(actual, expected)
-    assert round(actual, 7) == round(expected,7)
+    assert np.isclose(actual, expected), '{} is not close to {}'.format(expected, actual)
+    assert round(actual, 7) == round(expected,7), 'Rounded {} is not equalt to {}'.format(expected, actual)
   
 @param_data
 def test_builtin(data):
-    expected = part_A.std_loops(data)
+    expected = std_builtin(data)
     actual = np.std(data)
-    assert np.isclose(actual, expected)
-    assert round(actual, 7) == round(expected,7)
+    assert np.isclose(actual, expected), '{} is not close to {}'.format(expected, actual)
+    assert round(actual, 7) == round(expected,7), 'Rounded {} is not equalt to {}'.format(expected, actual)
 
 param_edge_data = pytest.mark.parametrize('edge_cases', [
     [],               
